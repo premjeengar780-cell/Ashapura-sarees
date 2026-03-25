@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,82 +8,98 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial;
-    background: #fff;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Header */
-header {
-    background: linear-gradient(45deg, #ff004f, #ff9900);
-    color: white;
-    text-align: center;
-    padding: 20px;
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: white;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
 }
 
 /* Banner */
 .banner {
-    background: url('https://images.unsplash.com/photo-1618354691373-d851c5c3a990');
+    background: url('https://images.unsplash.com/photo-1593032465171-8d3b1c3e0b8c');
     background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    text-align: center;
-    padding: 80px 20px;
+    font-size: 35px;
+    font-weight: bold;
 }
 
-.banner h2 {
-    font-size: 30px;
+/* Categories */
+.categories {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.cat {
+    margin: 10px;
+    padding: 15px 25px;
+    border: 1px solid black;
+    cursor: pointer;
 }
 
 /* Products */
 .products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
     padding: 20px;
 }
 
 .card {
-    width: 280px;
-    margin: 15px;
-    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
 }
 
 .card img {
     width: 100%;
-    height: 350px;
-    object-fit: cover;
+    transition: 0.3s;
+}
+
+.card:hover img {
+    transform: scale(1.1);
 }
 
 .card h3 {
-    text-align: center;
+    margin: 5px 0;
 }
 
 .price {
-    text-align: center;
     color: #ff004f;
-    font-weight: bold;
 }
 
 /* Button */
 .btn {
-    display: block;
-    margin: 10px auto 15px;
-    background: #25D366;
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 12px;
+    background: black;
     color: white;
-    padding: 10px;
-    text-align: center;
-    border-radius: 20px;
     text-decoration: none;
-    width: 80%;
 }
 
-/* WhatsApp Floating */
+/* WhatsApp */
 .whatsapp {
     position: fixed;
     bottom: 20px;
@@ -93,48 +108,68 @@ header {
     padding: 15px;
     border-radius: 50%;
     color: white;
-    text-decoration: none;
 }
 </style>
-
 </head>
 
 <body>
 
-<header>
-    <h1>Maa Ashapura Textiles</h1>
-    <p>Premium Saree Collection</p>
-</header>
-
-<section class="banner">
-    <h2>New Festive Collection</h2>
-    <p>Order Now on WhatsApp</p>
-</section>
-
-<section class="products">
-
-    <!-- Product 1 -->
-    <div class="card">
-        <img src="https://i.imgur.com/Jbrs4RK.jpeg">
-        <h3>Red Designer Saree</h3>
-        <p class="price">₹2499</p>
-        <a class="btn" href="https://wa.me/918278620741?text=Hello, mujhe Red Designer Saree pasand hai" target="_blank">
-            Order on WhatsApp
-        </a>
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">Maa Ashapura</div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Collection</a>
+        <a href="#">Contact</a>
     </div>
+</div>
 
-    <!-- Product 2 -->
-    <div class="card">
-        <img src="https://i.imgur.com/wDliJio.jpeg">
-        <h3>Green Border Saree</h3>
-        <p class="price">₹1999</p>
-        <a class="btn" href="https://wa.me/918278620741?text=Hello, mujhe Green Border Saree pasand hai" target="_blank">
-            Order on WhatsApp
-        </a>
-    </div>
+<!-- Banner -->
+<div class="banner">
+    New Saree Collection 🔥
+</div>
 
-</section>
+<!-- Categories -->
+<div class="categories">
+    <div class="cat">Silk</div>
+    <div class="cat">Wedding</div>
+    <div class="cat">Party Wear</div>
+</div>
 
+<!-- Products -->
+<div class="products">
+
+<div class="card">
+<img src="image1.jpg">
+<h3>Red Saree</h3>
+<p class="price">₹2499</p>
+<a class="btn" href="https://wa.me/918278620741?text=I want Red Saree">Order</a>
+</div>
+
+<div class="card">
+<img src="image2.jpg">
+<h3>Green Saree</h3>
+<p class="price">₹1999</p>
+<a class="btn" href="https://wa.me/918278620741?text=I want Green Saree">Order</a>
+</div>
+
+<div class="card">
+<img src="image3.jpg">
+<h3>Designer Saree</h3>
+<p class="price">₹2999</p>
+<a class="btn" href="https://wa.me/918278620741?text=I want Designer Saree">Order</a>
+</div>
+
+<div class="card">
+<img src="image4.jpg">
+<h3>Wedding Saree</h3>
+<p class="price">₹4999</p>
+<a class="btn" href="https://wa.me/918278620741?text=I want Wedding Saree">Order</a>
+</div>
+
+</div>
+
+<!-- WhatsApp -->
 <a class="whatsapp" href="https://wa.me/918278620741">💬</a>
 
 </body>
